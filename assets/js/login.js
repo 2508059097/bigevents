@@ -32,7 +32,7 @@
     $('#login2 .layui-form').on('submit',function(e){
         e.preventDefault()
         let layer=layui.layer
-        $.post('http://www.liulongbin.top:3007/api/reguser',{username:$('#login2 [name=username]').val(),password:$('#login2 [name=password]').val()},function(res){
+        $.post('/api/reguser',{username:$('#login2 [name=username]').val(),password:$('#login2 [name=password]').val()},function(res){
             console.log(res)
             if(res.status===1){
                 layer.msg(res.message);
