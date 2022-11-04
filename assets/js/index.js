@@ -10,6 +10,7 @@ function getuserinfo(){
             if(res.status!==0){
                 return layui.layer.msg('获取用户信息失败')
             }
+            // 渲染头像
             renderAvatar(res.data)
         },
         // complete:function(res){
